@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <div>Copyright 2021 Big Dream</div>
-    </div>
+    </footer>
   );
 };
 

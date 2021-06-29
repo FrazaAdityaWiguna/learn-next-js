@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/Dream.module.css";
 import Layout from "../../comps/Layout";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -14,13 +15,13 @@ export const getStaticProps = async () => {
 const Dream = ({ dreams }) => {
   return (
     <Layout title='Member'>
-      <h1>BIG DREAM member</h1>
+      <h1>All Bigdream</h1>
       {dreams.map((dream) => (
-        <div key={dream.id}>
+        <Link href={`/dream/${dream.id}`} key={dream.id}>
           <a className={styles.single}>
             <h3>{dream.name}</h3>
           </a>
-        </div>
+        </Link>
       ))}
     </Layout>
   );

@@ -5,7 +5,7 @@ const Dream = () => {
   return (
     <div>
       <Navbar />
-      <h1>BIG DREAMs</h1>
+      <h1>BIG DREAM member</h1>
     </div>
   );
 };
